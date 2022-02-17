@@ -16,16 +16,25 @@
 
 
     <div id="app">
-        <p>{{message}}</p>
-        <h1>Saldo disponible: {{cantidad >= 1 ? cantidad : "carga la sube!"}}</h1>
+        <div>
+            <h1>Hola {{nombreCompleto}}!</h1>
+        </div>
+        <hr>
+        <h2>Contador: {{counter}}</h2>
+        
+        <button @click="counter -= 1">Restar</button>
+        <button @click="counter += 1">Sumar</button>
+
     </div>
+
+
 
     <script>
         new Vue({
             el: "#app",
             data: {
-                message: "Soy hacker",
-                cantidad: 0
+                nombreCompleto: "Franco Dans",
+                counter: 0
             }
         })
     </script>
